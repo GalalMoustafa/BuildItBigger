@@ -1,39 +1,32 @@
-Aug 07, 2019 11:14:13 AM java.util.prefs.WindowsPreferences <init>
+Aug 08, 2019 1:26:53 PM java.util.prefs.WindowsPreferences <init>
 WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
-Aug 07, 2019 11:14:13 AM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+Aug 08, 2019 1:26:54 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\Galal Mostafa\Desktop\BuildItBigger\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-2019-08-07 11:14:13.822:INFO::main: Logging initialized @449ms to org.eclipse.jetty.util.log.StdErrLog
-2019-08-07 11:14:13.864:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
-Aug 07, 2019 9:14:14 AM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
-WARNING: Your working directory, (C:\Users\Galal Mostafa\Desktop\BuildItBigger\backend) is not equal to your 
-web application root (C:\Users\Galal Mostafa\Desktop\BuildItBigger\backend\build\exploded-backend)
-You will not be able to access files from your working directory on the production server.
-
-2019-08-07 11:14:14.128:INFO:oejs.Server:main: jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_152-release-1343-b01
-2019-08-07 11:14:14.732:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@65987993{/,file:///C:/Users/Galal%20Mostafa/Desktop/BuildItBigger/backend/build/exploded-backend/,AVAILABLE}{C:\Users\Galal Mostafa\Desktop\BuildItBigger\backend\build\exploded-backend}
-2019-08-07 11:14:14.733:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
-2019-08-07 11:14:14.733:INFO:oejs.session:main: node0 Scavenging disabled
-2019-08-07 11:14:14.747:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@6f1fba17{HTTP/1.1,[http/1.1]}{localhost:8080}
-2019-08-07 11:14:14.748:INFO:oejs.Server:main: Started @1375ms
-Aug 07, 2019 9:14:14 AM com.google.appengine.tools.development.AbstractModule startup
-INFO: Module instance default is running at http://localhost:8080/
-Aug 07, 2019 9:14:14 AM com.google.appengine.tools.development.AbstractModule startup
-INFO: The admin console is running at http://localhost:8080/_ah/admin
-Aug 07, 2019 11:14:14 AM com.google.appengine.tools.development.DevAppServerImpl doStart
-INFO: Dev App Server is now running
-Aug 07, 2019 11:14:20 AM com.google.appengine.api.datastore.dev.LocalDatastoreService init
-INFO: Local Datastore initialized: 
-	Type: High Replication
-	Storage: C:\Users\Galal Mostafa\Desktop\BuildItBigger\backend\build\exploded-backend\WEB-INF\appengine-generated\local_db.bin
-Aug 07, 2019 11:14:20 AM com.google.appengine.api.datastore.dev.LocalDatastoreService load
-INFO: The backing store, C:\Users\Galal Mostafa\Desktop\BuildItBigger\backend\build\exploded-backend\WEB-INF\appengine-generated\local_db.bin, does not exist. It will be created.
-Aug 07, 2019 11:14:21 AM com.google.appengine.tools.development.jetty9.LocalResourceFileServlet doGet
-WARNING: No file found for: /favicon.ico
-Aug 07, 2019 11:14:36 AM com.google.appengine.api.search.dev.LocalSearchService <init>
-INFO: Local search service created
-Aug 07, 2019 11:14:36 AM com.google.appengine.api.search.dev.LuceneDirectoryMap$FileBased <init>
-SEVERE: File base storage: root directory doesn't exist
-Aug 07, 2019 11:14:36 AM com.google.appengine.api.search.dev.LocalSearchService init
-INFO: search initialized
-Aug 07, 2019 11:14:36 AM com.google.appengine.api.search.dev.LocalSearchService start
-INFO: search started
+2019-08-08 13:26:54.229:INFO::main: Logging initialized @595ms to org.eclipse.jetty.util.log.StdErrLog
+2019-08-08 13:26:54.304:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
+java.io.IOException: Failed to bind to localhost/127.0.0.1:8080
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:346)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:308)
+	at com.google.appengine.tools.development.jetty9.JettyContainerService.connectContainer(JettyContainerService.java:309)
+	at com.google.appengine.tools.development.AbstractContainerService.createConnection(AbstractContainerService.java:268)
+	at com.google.appengine.tools.development.AbstractInstanceHolder.createConnection(AbstractInstanceHolder.java:37)
+	at com.google.appengine.tools.development.AbstractModule.createConnection(AbstractModule.java:73)
+	at com.google.appengine.tools.development.Modules.createConnections(Modules.java:99)
+	at com.google.appengine.tools.development.DevAppServerImpl.doStart(DevAppServerImpl.java:245)
+	at com.google.appengine.tools.development.DevAppServerImpl.access$000(DevAppServerImpl.java:47)
+	at com.google.appengine.tools.development.DevAppServerImpl$1.run(DevAppServerImpl.java:223)
+	at com.google.appengine.tools.development.DevAppServerImpl$1.run(DevAppServerImpl.java:221)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.google.appengine.tools.development.DevAppServerImpl.start(DevAppServerImpl.java:221)
+	at com.google.appengine.tools.development.DevAppServerMain$StartAction.apply(DevAppServerMain.java:404)
+	at com.google.appengine.tools.util.Parser$ParseResult.applyArgs(Parser.java:45)
+	at com.google.appengine.tools.development.DevAppServerMain.run(DevAppServerMain.java:257)
+	at com.google.appengine.tools.development.DevAppServerMain.main(DevAppServerMain.java:248)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:342)
+	... 16 more

@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
+        MyAsyncTask myAsyncTask = new MyAsyncTask();
+        myAsyncTask.execute(this);
     }
 
 
